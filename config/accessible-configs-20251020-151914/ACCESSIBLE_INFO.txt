@@ -1,0 +1,112 @@
+=== System Information ===
+Date: $(date)
+Hostname: $(hostname)
+User: $(whoami)
+Home: $HOME
+OS: $(cat /etc/os-release 2>/dev/null | grep PRETTY_NAME || echo "Unknown")
+Kernel: $(uname -r)
+
+=== What user can see in /etc ===
+total 1184
+drwxr-xr-x 128 root     root     12288 Oct 19 06:04 .
+drwxr-xr-x  18 root     root      4096 Oct 19 06:02 ..
+-rw-r--r--   1 root     root      2981 Sep 24  2020 adduser.conf
+-rw-r--r--   1 root     root        44 Sep 24  2020 adjtime
+-rw-r--r--   1 root     root       214 Oct 12  2023 aliases
+drwxr-xr-x   2 root     root     20480 Oct 17 21:58 alternatives
+drwxr-xr-x   2 root     root      4096 Jun  8  2024 ansible
+drwxr-xr-x   8 root     root      4096 Sep  2 19:44 apache2
+drwxr-xr-x   3 root     root      4096 Sep 24  2020 apm
+drwxr-xr-x   3 root     root      4096 Sep  2 19:41 apparmor
+drwxr-xr-x   7 root     root      4096 Sep  2 19:43 apparmor.d
+drwxr-xr-x   8 root     root      4096 Sep  2 19:42 apt
+drwxr-xr-x   3 root     root      4096 Sep  2 19:42 ax25
+-rw-r--r--   1 root     root      1994 Apr 18  2019 bash.bashrc
+-rw-r--r--   1 root     root        45 Feb 11  2019 bash_completion
+drwxr-xr-x   2 root     root      4096 Oct 19 06:04 bash_completion.d
+-rw-r--r--   1 root     root       367 Mar  2  2018 bindresvport.blacklist
+drwxr-xr-x   2 root     root      4096 Jan 29  2020 binfmt.d
+drwxr-xr-x   3 root     root      4096 Sep 24  2020 ca-certificates
+
+=== Apache-related processes ===
+root         404  0.0  0.8   6700  4144 ?        Ss   Oct07   1:14 /usr/sbin/apache2 -k start
+www-data  745788  0.0  1.1 753264  5428 ?        Sl   00:00   0:00 /usr/sbin/apache2 -k start
+www-data  745789  0.0  1.1 753208  5520 ?        Sl   00:00   0:01 /usr/sbin/apache2 -k start
+
+=== Apache binaries ===
+
+=== Web directories user can see ===
+total 28
+drwxr-xr-x  7 root  root     4096 Oct 12 00:22 .
+drwxr-xr-x 14 root  root     4096 Jan 19  2021 ..
+drwxr-xr-x  4 steve www-data 4096 May 12 01:04 arpoison.net
+drwxr-xr-x  3 root  root     4096 Oct 12 00:22 dx.jxqz.org
+drwxr-xr-x  2 steve www-data 4096 Mar 21  2023 html
+drwxr-xr-x 17 steve www-data 4096 Mar 15  2023 jxqz.org
+drwxr-xr-x  2 steve www-data 4096 Mar 15  2023 suoc.org
+
+=== User home directory ===
+total 892
+drwxr-xr-x 23 steve steve   4096 Oct 20 21:06 .
+drwxr-xr-x  4 root  root    4096 Mar 23  2023 ..
+-rw-r--r--  1 steve steve      0 Oct 11  2020 .addressbook
+drwx------  3 steve steve   4096 Jun 10  2021 .ansible
+-rw-r--r--  1 steve steve     24 Nov 23  2020 .aspell.en.prepl
+-rw-r--r--  1 steve steve     22 Nov 23  2020 .aspell.en.pws
+drwxr-xr-x  2 steve steve   4096 Dec 22  2022 BACKUP
+-rw-------  1 steve steve  35044 Oct 20 21:06 .bash_history
+-rw-r--r--  1 steve steve    220 Oct 11  2020 .bash_logout
+-rw-r--r--  1 steve steve   3564 Jun 11  2021 .bashrc
+-rw-r--r--  1 steve steve   3557 Jun 11  2021 .bashrc.17296.2021-06-11@04:04:47~
+-rw-r--r--  1 steve steve   3564 Jun 11  2021 .bashrc.17389.2021-06-11@04:05:52~
+-rw-r--r--  1 steve steve   3564 Jun 11  2021 .bashrc.17806.2021-06-11@04:09:03~
+drwxr-xr-x  2 steve steve   4096 Dec  3  2021 bin
+-rw-r--r--  1 steve steve     17 Jun 11  2021 .bobrc
+drwx------  4 steve steve   4096 Mar  7  2021 .cache
+drwx------  3 steve steve   4096 Oct 12  2020 .config
+drwxr-xr-x  3 steve steve   4096 Mar 22  2023 DOVECOT
+drwx------  2 steve steve   4096 Nov  9  2020 .elinks
+-rw-r--r--  1 steve steve    143 Dec 26  2024 football.r
+-rw-r--r--  1 steve steve    147 May  6  2022 .gitconfig
+drwxr-xr-x  4 steve steve   4096 Oct 17 21:57 GITHUB
+drwx------  3 steve steve   4096 Oct 21  2021 .gnupg
+drwxr-xr-x  5 steve steve   4096 Sep  2 20:02 .ipython
+-rw-------  1 steve steve    221 Oct 17 23:42 .lesshst
+drwxr-xr-x  3 steve steve   4096 May  6  2022 .local
+drwx------  3 steve steve   4096 Oct 20 22:18 mail
+drwx------  2 steve steve   4096 Oct 23  2020 Mail
+drwxr-xr-x  2 steve steve   4096 Jun 11  2024 MAIL_FILTERING
+drwx------  2 steve steve   4096 Oct 23  2020 News
+drwx------  2 steve steve   4096 Nov 20  2020 .newsboat
+-rw-r--r--  1 steve steve    232 Oct 27  2020 .newsrc
+drwxr-xr-x  2 steve steve   4096 Oct 12  2023 NOTES-BAK
+-rw-------  1 steve steve  22467 Mar 22  2023 .pinerc
+-rw-r--r--  1 steve steve    890 Jun 28  2023 .profile
+-rw-------  1 steve steve   1236 Oct 18 18:01 .psql_history
+drwxr-xr-x 13 steve steve   4096 Oct  8 00:52 public_html
+-rw-------  1 steve steve    158 Sep  2 19:48 .python_history
+-rw-------  1 steve steve 648408 Jul 31  2024 sent
+-rw-------  1 steve steve    280 Sep 30 01:51 .sqlite_history
+drwx------  2 steve steve   4096 Oct  1 15:00 .ssh
+drwx------  5 steve steve   4096 Oct 27  2020 .tin
+drwxr-xr-x  2 steve steve   4096 Oct 18 19:22 VERILOG
+-rw-------  1 steve steve  30733 Oct 17 23:44 .viminfo
+-rw-r--r--  1 steve steve    415 May 12 01:04 .wget-hsts
+-rw-------  1 steve steve     52 Sep 26  2024 .Xauthority
+-rw-r--r--  1 steve steve      0 Oct 17  2020 .yadifa.rc
+
+=== Web-related files in home ===
+/home/steve/GITHUB/cs330-projects/homework2/api/data_browser.html
+/home/steve/GITHUB/cs330-projects/homework2/config/dx.jxqz.org.conf
+/home/steve/GITHUB/cs330-projects/homework2/flask-test/apache-wsgi.conf
+/home/steve/NOTES-BAK/rg58.html
+/home/steve/NOTES-BAK/index.html
+/home/steve/NOTES-BAK/rg174.html
+/home/steve/NOTES-BAK/hf-mobile.html
+/home/steve/public_html/index.html
+/home/steve/public_html/commodore128.html
+/home/steve/public_html/scrap.html
+
+=== Cron jobs for user ===
+
+=== Sudo capabilities ===

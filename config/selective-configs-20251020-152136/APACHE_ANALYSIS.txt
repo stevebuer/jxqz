@@ -1,0 +1,244 @@
+=== Apache Virtual Hosts ===
+total 36
+drwxr-xr-x 2 root root 4096 Oct 12 00:19 .
+drwxr-xr-x 8 root root 4096 Sep  2 19:44 ..
+-rw-r--r-- 1 root root 1330 Mar 21  2023 000-default.conf
+-rw-r--r-- 1 root root  416 Mar 21  2023 arpoison.net.conf
+-rw-r--r-- 1 root root 6347 Jan 19  2021 default-ssl.conf
+-rw-r--r-- 1 root root 1689 Oct 12 00:19 dx.jxqz.org.conf
+-rw-r--r-- 1 root root  392 Mar 29  2023 jxqz.org.conf
+-rw-r--r-- 1 root root  388 Mar 21  2023 suoc.org.conf
+
+=== 000-default.conf ===
+Cannot read site config
+
+=== arpoison.net.conf ===
+Cannot read site config
+
+=== default-ssl.conf ===
+Cannot read site config
+
+=== dx.jxqz.org.conf ===
+Cannot read site config
+
+=== jxqz.org.conf ===
+Cannot read site config
+
+=== suoc.org.conf ===
+Cannot read site config
+
+=== Enabled Sites ===
+total 8
+drwxr-xr-x 2 root root 4096 Oct 12 00:22 .
+drwxr-xr-x 8 root root 4096 Sep  2 19:44 ..
+lrwxrwxrwx 1 root root   35 Mar 15  2023 000-default.conf -> ../sites-available/000-default.conf
+lrwxrwxrwx 1 root root   36 Mar 15  2023 arpoison.net.conf -> ../sites-available/arpoison.net.conf
+lrwxrwxrwx 1 root root   35 Oct 12 00:22 dx.jxqz.org.conf -> ../sites-available/dx.jxqz.org.conf
+lrwxrwxrwx 1 root root   32 Mar 15  2023 jxqz.org.conf -> ../sites-available/jxqz.org.conf
+lrwxrwxrwx 1 root root   32 Mar 21  2023 suoc.org.conf -> ../sites-available/suoc.org.conf
+
+=== Enabled Modules ===
+access_compat
+alias
+auth_basic
+authn_core
+authn_file
+authz_core
+authz_host
+authz_user
+autoindex
+deflate
+dir
+env
+filter
+mime
+mpm_event
+negotiation
+reqtimeout
+setenvif
+status
+userdir
+
+=== Web Directory Structure ===
+/var/www
+/var/www/dx.jxqz.org
+/var/www/dx.jxqz.org/public_html
+/var/www/suoc.org
+/var/www/html
+/var/www/jxqz.org
+/var/www/jxqz.org/foreign
+/var/www/jxqz.org/foreign/slovakia
+/var/www/jxqz.org/foreign/serbia
+/var/www/jxqz.org/foreign/taiwan
+/var/www/jxqz.org/foreign/cambodia
+/var/www/jxqz.org/foreign/hungary
+/var/www/jxqz.org/foreign/vietnam
+/var/www/jxqz.org/foreign/austria
+/var/www/jxqz.org/foreign/germany
+/var/www/jxqz.org/foreign/laos
+/var/www/jxqz.org/foreign/switzerland
+/var/www/jxqz.org/foreign/thailand
+/var/www/jxqz.org/foreign/sweden
+/var/www/jxqz.org/foreign/turkey
+/var/www/jxqz.org/foreign/myanmar
+/var/www/jxqz.org/foreign/france
+/var/www/jxqz.org/foreign/bulgaria
+/var/www/jxqz.org/foreign/denmark
+/var/www/jxqz.org/foreign/italy
+/var/www/jxqz.org/foreign/czechrep
+/var/www/jxqz.org/the_north
+/var/www/jxqz.org/the_north/summit
+/var/www/jxqz.org/the_north/schwartzberg_wedding
+/var/www/jxqz.org/the_north/thanksgiving_caving
+/var/www/jxqz.org/the_north/ice_climbing
+/var/www/jxqz.org/the_north/flt_hiking
+/var/www/jxqz.org/the_north/flt
+/var/www/jxqz.org/lost+found
+/var/www/jxqz.org/film_projects
+/var/www/jxqz.org/film_projects/35mm
+/var/www/jxqz.org/film_projects/lobster
+/var/www/jxqz.org/film_projects/fuji_waterproof
+/var/www/jxqz.org/film_projects/120film
+/var/www/jxqz.org/film_projects/ektar
+/var/www/jxqz.org/film_projects/rollei
+/var/www/jxqz.org/film_projects/channel_islands
+/var/www/jxqz.org/film_projects/pentax-k2
+/var/www/jxqz.org/film_projects/tasma
+/var/www/jxqz.org/film_projects/skylark
+/var/www/jxqz.org/film_projects/110film
+/var/www/jxqz.org/film_projects/fisher_price
+/var/www/jxqz.org/film_projects/bw400
+/var/www/jxqz.org/film_projects/enchanted
+/var/www/jxqz.org/film_projects/fuji_quicksnap
+/var/www/jxqz.org/slides
+/var/www/jxqz.org/slides/tag
+/var/www/jxqz.org/slides/cortlib_scans
+/var/www/jxqz.org/slides/colorado
+/var/www/jxqz.org/slides/caving
+/var/www/jxqz.org/slides/the_west
+/var/www/jxqz.org/slides/chaos
+/var/www/jxqz.org/slides/puerto_rico
+/var/www/jxqz.org/old_photos
+/var/www/jxqz.org/old_photos/west_virginia
+/var/www/jxqz.org/old_photos/colorado
+/var/www/jxqz.org/old_photos/syracuse
+/var/www/jxqz.org/old_photos/cortland
+/var/www/jxqz.org/old_photos/cranberry
+/var/www/jxqz.org/rockies
+/var/www/jxqz.org/rockies/glacier
+/var/www/jxqz.org/various
+/var/www/jxqz.org/various/cheese
+/var/www/jxqz.org/various/books
+/var/www/jxqz.org/various/ozette
+/var/www/jxqz.org/various/breadbox
+/var/www/jxqz.org/various/kimchee
+/var/www/jxqz.org/various/coleman
+/var/www/jxqz.org/suoc
+/var/www/jxqz.org/suoc/penelopes_wedding
+/var/www/jxqz.org/suoc/england
+/var/www/jxqz.org/suoc/alpena_inn
+/var/www/jxqz.org/suoc/suoc_tag
+/var/www/jxqz.org/suoc/various
+/var/www/jxqz.org/suoc/tag2006
+/var/www/jxqz.org/suoc/old_forge
+/var/www/jxqz.org/suoc/contrib
+/var/www/jxqz.org/suoc/west_virginia_2006
+/var/www/jxqz.org/cascadia
+/var/www/jxqz.org/cascadia/nw_winter
+/var/www/jxqz.org/cascadia/seattle_parks
+/var/www/jxqz.org/cascadia/high_desert
+/var/www/jxqz.org/cascadia/bellevue
+/var/www/jxqz.org/cascadia/fort_nisqually
+/var/www/jxqz.org/cascadia/olympic
+/var/www/jxqz.org/cascadia/orcas
+/var/www/jxqz.org/cascadia/rainier
+/var/www/jxqz.org/cascadia/puget_sound
+/var/www/jxqz.org/cascadia/lost_adventures
+/var/www/jxqz.org/cascadia/victoria
+/var/www/jxqz.org/cascadia/skamania
+/var/www/jxqz.org/cascadia/oregon_snapshots
+/var/www/jxqz.org/caving
+/var/www/jxqz.org/caving/rocky_river
+/var/www/jxqz.org/caving/vanburen
+/var/www/jxqz.org/caving/sittons
+/var/www/jxqz.org/caving/hurricane
+/var/www/jxqz.org/caving/misc_caving
+/var/www/jxqz.org/caving/hubbards
+/var/www/jxqz.org/caving/mayhem
+/var/www/jxqz.org/caving/florida
+/var/www/jxqz.org/caving/buggytop
+/var/www/jxqz.org/caving/march_madness
+/var/www/jxqz.org/caving/friars_hole
+/var/www/jxqz.org/caving/jessandtate
+/var/www/jxqz.org/caving/winter_sera
+/var/www/jxqz.org/caving/espey
+/var/www/jxqz.org/caving/ape_cave
+/var/www/jxqz.org/caving/horse_skull
+/var/www/jxqz.org/the_west
+/var/www/jxqz.org/the_west/winter_fun
+/var/www/jxqz.org/the_west/caving_umpqua
+/var/www/jxqz.org/the_west/los_angeles
+/var/www/jxqz.org/the_west/march_skiing
+/var/www/jxqz.org/the_west/alaska
+/var/www/jxqz.org/the_west/oregon_trail
+/var/www/jxqz.org/the_west/southwest_winds
+/var/www/jxqz.org/the_west/seattle_and_vancouver
+/var/www/jxqz.org/the_west/newberry_monument
+/var/www/jxqz.org/the_west/rafting
+/var/www/jxqz.org/the_west/hawaii
+/var/www/jxqz.org/the_west/bridger
+/var/www/jxqz.org/the_west/mt_wa
+/var/www/jxqz.org/the_west/yellowstone
+/var/www/jxqz.org/the_west/caving_and_olympic
+/var/www/jxqz.org/the_west/cascade_lakes
+/var/www/jxqz.org/the_west/colorado
+/var/www/jxqz.org/the_west/jackson
+/var/www/jxqz.org/the_west/teton_and_yellowstone
+/var/www/jxqz.org/the_west/oregon_coast
+/var/www/jxqz.org/the_west/salt_lake_city
+/var/www/jxqz.org/the_west/cypress_bowl
+/var/www/jxqz.org/the_west/big_sky_country
+/var/www/jxqz.org/the_west/smith_rock
+/var/www/jxqz.org/the_west/whidbey_island
+/var/www/jxqz.org/the_west/canoeing_and_climbing
+/var/www/jxqz.org/the_west/montana
+/var/www/jxqz.org/the_west/yosts_wedding
+/var/www/jxqz.org/the_west/cascades_hiking
+/var/www/jxqz.org/the_west/wyoming
+/var/www/jxqz.org/the_west/north_cascades_and_rainier
+/var/www/jxqz.org/the_west/vashon_island
+/var/www/jxqz.org/the_west/deschutes_rafting
+/var/www/jxqz.org/the_west/hells_canyon
+/var/www/jxqz.org/the_west/bend
+/var/www/jxqz.org/the_west/mount_hood
+/var/www/jxqz.org/technology
+/var/www/jxqz.org/amateur_radio
+/var/www/jxqz.org/amateur_radio/notes
+/var/www/jxqz.org/amateur_radio/qsl
+/var/www/jxqz.org/amateur_radio/uxmit
+/var/www/jxqz.org/amateur_radio/audio
+/var/www/jxqz.org/amateur_radio/projects
+/var/www/jxqz.org/amateur_radio/station
+/var/www/jxqz.org/amateur_radio/maps
+/var/www/jxqz.org/amateur_radio/repair
+/var/www/jxqz.org/the_south
+/var/www/jxqz.org/the_south/dcg_ropes_course
+/var/www/jxqz.org/the_south/bloodmountain
+/var/www/jxqz.org/the_south/mardi_gras
+/var/www/jxqz.org/the_south/sequatchie
+/var/www/jxqz.org/the_south/vegas
+/var/www/jxqz.org/the_south/sw_caving
+/var/www/jxqz.org/the_south/sw_rafting
+/var/www/jxqz.org/the_south/hooch
+/var/www/arpoison.net
+/var/www/arpoison.net/datasheets
+/var/www/arpoison.net/resume
+Cannot access /var/www
+
+=== Cron Jobs ===
+No user crontab
+
+=== Running Services ===
+  apache2.service             loaded active running The Apache HTTP Server
+  dovecot.service             loaded active running Dovecot IMAP/POP3 email server
+  postgresql@13-main.service  loaded active running PostgreSQL Cluster 13-main

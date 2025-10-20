@@ -1,0 +1,95 @@
+=== Storage Configuration Analysis ===
+Generated: $(date)
+Server: jxqz.org
+
+=== Disk Usage ===
+Filesystem      Size  Used Avail Use% Mounted on
+udev            213M     0  213M   0% /dev
+tmpfs            47M  1.6M   45M   4% /run
+/dev/vda1       9.4G  7.6G  1.3G  86% /
+tmpfs           231M   16K  231M   1% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/vdb1        40G  8.0G   30G  22% /var/www/jxqz.org
+tmpfs            47M     0   47M   0% /run/user/1000
+
+=== Block Devices ===
+NAME   FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINT
+sr0                                                                           
+vda                                                                           
+└─vda1 ext4   1.0         13b2195c-fdd8-4723-b805-cf2265854f74    1.3G    81% /
+vdb                                                                           
+└─vdb1 ext4   1.0         850eaf34-7eed-4b48-9adf-947fe8298704   29.1G    20% /var/www/jxqz.org
+
+=== Mount Points ===
+/dev/vda1 on / type ext4 (rw,relatime,errors=remount-ro)
+/dev/vdb1 on /var/www/jxqz.org type ext4 (rw,noatime)
+
+=== File System Table ===
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/vda1 during installation
+UUID=13b2195c-fdd8-4723-b805-cf2265854f74 /               ext4    errors=remount-ro 0       1
+/dev/sr0	/media/cdrom0	udf,iso9660	user,noauto	0	0
+/dev/vdb1	/var/www/jxqz.org	ext4	defaults,noatime,nofail	0	0
+
+=== Volume UUIDs ===
+/dev/vda1: UUID="13b2195c-fdd8-4723-b805-cf2265854f74" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="ce95d44c-01"
+/dev/vdb1: UUID="850eaf34-7eed-4b48-9adf-947fe8298704" BLOCK_SIZE="4096" TYPE="ext4" PARTLABEL="primary" PARTUUID="86b819fc-7442-44de-8883-f966335bc831"
+
+=== Directory Structure of Web Volume ===
+total 220
+drwxr-xr-x 17 steve www-data  4096 Mar 15  2023 .
+drwxr-xr-x  7 root  root      4096 Oct 12 00:22 ..
+drwxr-xr-x 10 steve steve     4096 Jun 22 03:55 amateur_radio
+drwxr-xr-x 15 steve steve     4096 Mar 13  2023 cascadia
+drwxr-xr-x 18 steve steve     4096 Mar 14  2023 caving
+-rw-r--r--  1 steve steve     8209 May  2  2018 email_logo.jpg
+-rw-r--r--  1 steve steve     1150 May  2  2018 favicon.ico
+drwxr-xr-x 17 steve steve     4096 Mar 21  2023 film_projects
+drwxr-xr-x 21 steve steve     4096 Mar 13  2023 foreign
+-rw-r--r--  1 steve steve     1039 Mar 14  2023 index.html
+-rw-r--r--  1 steve steve    62772 May  2  2018 jxqz_logo.jpg
+drwx------  2 root  root     16384 Mar 15  2023 lost+found
+drwxr-xr-x  7 steve steve     4096 Mar 14  2023 old_photos
+-rw-r--r--  1 steve steve       33 May  2  2018 robots.txt
+drwxr-xr-x  3 steve steve     4096 Mar 13  2023 rockies
+drwxr-xr-x  9 steve steve     4096 Mar 14  2023 slides
+-rw-r--r--  1 steve steve    50679 May  2  2018 steve.jpg
+drwxr-xr-x 11 steve steve     4096 Mar 13  2023 suoc
+drwxr-xr-x  2 steve steve     4096 Mar 13  2023 technology
+
+=== Web Volume Size Breakdown ===
+2.6G	/var/www/jxqz.org/film_projects
+1.7G	/var/www/jxqz.org/foreign
+1.7G	/var/www/jxqz.org/cascadia
+955M	/var/www/jxqz.org/the_west
+332M	/var/www/jxqz.org/caving
+193M	/var/www/jxqz.org/amateur_radio
+162M	/var/www/jxqz.org/various
+130M	/var/www/jxqz.org/rockies
+119M	/var/www/jxqz.org/the_south
+111M	/var/www/jxqz.org/slides
+
+=== File System Information ===
+Filesystem volume name:   <none>
+Filesystem UUID:          850eaf34-7eed-4b48-9adf-947fe8298704
+Filesystem magic number:  0xEF53
+Filesystem revision #:    1 (dynamic)
+Filesystem features:      has_journal ext_attr resize_inode dir_index filetype needs_recovery extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+Filesystem flags:         signed_directory_hash 
+Filesystem state:         clean
+Filesystem OS type:       Linux
+Inode count:              2621440
+Block count:              10485248
+Block size:               4096
+Blocks per group:         32768
+Inodes per group:         8192
+Inode blocks per group:   512
+Filesystem created:       Wed Mar 15 22:32:05 2023
+Mount count:              5
+Inode size:	          256

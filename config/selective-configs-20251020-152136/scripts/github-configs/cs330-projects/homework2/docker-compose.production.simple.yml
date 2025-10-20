@@ -1,0 +1,62 @@
+# Production Docker Compose Configuration
+# Compatible with very old Docker Compose versions (1.x)
+# Simplified configuration without advanced features
+
+version: '2'
+
+services:
+  # Database connectivity check service
+  postgres-check:
+    image: postgres:15-alpine
+    container_name: dx-postgres-check
+    network_mode: host
+    environment:
+      - PGHOST=${PGHOST}
+      - PGDATABASE=${PGDATABASE}
+      - PGUSER=${PGUSER}
+      - PGPASSWORD=${PGPASSWORD}
+      - PGPORT=${PGPORT}
+    command: >
+      sh -c "
+        until pg_isready -h $${PGHOST} -p $${PGPORT} -U $${PGUSER}; do
+          echo 'Waiting for PostgreSQL...'
+          sleep 2
+        done
+        echo 'PostgreSQL is ready!'
+      "
+
+  # DX Cluster API Server
+  dx-api:
+    image: dx-cluster-api:latest
+    container_name: dx-cluster-api
+    network_mode: host
+    environment:
+      - PGHOST=${PGHOST}
+      - PGDATABASE=${PGDATABASE}
+      - PGUSER=${PGUSER}
+      - PGPASSWORD=${PGPASSWORD}
+      - PGPORT=${PGPORT}
+      - FLASK_ENV=production
+    env_file:
+      - .env
+    restart: unless-stopped
+    depends_on:
+      - postgres-check
+
+  # DX Cluster Web Dashboard
+  dx-web:
+    image: dx-cluster-web:latest
+    container_name: dx-cluster-web
+    network_mode: host
+    environment:
+      - PGHOST=${PGHOST}
+      - PGDATABASE=${PGDATABASE}
+      - PGUSER=${PGUSER}
+      - PGPASSWORD=${PGPASSWORD}
+      - PGPORT=${PGPORT}
+      - DASH_ENV=production
+    env_file:
+      - .env
+    restart: unless-stopped
+    depends_on:
+      - postgres-check

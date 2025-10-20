@@ -1,0 +1,198 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile for JXQZ testing environment
+# Creates a Debian VM that mirrors your production Vultr server
+
+Vagrant.configure("2") do |config|
+  # Use Debian 12 (Bookworm) to match your production server
+  config.vm.box = "debian/bookworm64"
+  config.vm.box_version = ">= 12.0"
+
+  # VM Configuration
+  config.vm.hostname = "jxqz-test"
+  
+  # Network Configuration
+  # Private network for testing (accessible from host only)
+  config.vm.network "private_network", ip: "192.168.56.10"
+  
+  # Port forwarding for web services
+  config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"    # Apache
+  config.vm.network "forwarded_port", guest: 443, host: 8443, host_ip: "127.0.0.1"   # HTTPS
+  config.vm.network "forwarded_port", guest: 143, host: 1143, host_ip: "127.0.0.1"   # IMAP
+  config.vm.network "forwarded_port", guest: 993, host: 9993, host_ip: "127.0.0.1"   # IMAPS
+  config.vm.network "forwarded_port", guest: 5432, host: 15432, host_ip: "127.0.0.1" # PostgreSQL
+
+  # VirtualBox-specific configuration
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "jxqz-test-vm"
+    vb.memory = "2048"  # 2GB RAM
+    vb.cpus = 2
+    
+    # Enable nested virtualization (useful for Docker testing)
+    vb.customize ["modifyvm", :id, "--nested-hw-virt", "on"]
+    
+    # Network adapter settings
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    
+    # Create additional storage volume to simulate production setup
+    # This mimics the /dev/vdb1 40GB volume for consolidated web content
+    unless File.exist?('./web-content-volume.vdi')
+      vb.customize ['createhd', '--filename', './web-content-volume.vdi', '--size', 8 * 1024] # 8GB for testing (larger for enhanced layout)
+    end
+    vb.customize ['storageattach', :id, '--storagectl', 'SATA Controller', '--port', 1, '--device', 0, '--type', 'hdd', '--medium', './web-content-volume.vdi']
+  end
+
+  # Shared folder for development
+  config.vm.synced_folder "../", "/vagrant/jxqz", 
+    type: "virtualbox",
+    mount_options: ["dmode=755", "fmode=644"]
+
+  # Basic provisioning - install essential packages
+  config.vm.provision "shell", inline: <<-SHELL
+    # Update package list
+    apt-get update
+
+    # Install basic development tools
+    apt-get install -y \
+      curl \
+      wget \
+      git \
+      vim \
+      htop \
+      tree \
+      rsync \
+      unzip \
+      software-properties-common \
+      apt-transport-https \
+      ca-certificates \
+      gnupg \
+      lsb-release
+
+    # Install Apache2 (to match production)
+    apt-get install -y apache2 apache2-utils
+
+    # Install PostgreSQL (for dx.jxqz.org testing)
+    apt-get install -y postgresql postgresql-contrib
+
+    # Install Dovecot (email server)
+    apt-get install -y dovecot-imapd dovecot-pop3d dovecot-core
+
+    # Install ImageMagick (for gallery scripts)
+    apt-get install -y imagemagick
+
+    # Install Python and pip (for Flask applications)
+    apt-get install -y python3 python3-pip python3-venv python3-dev
+
+    # Install additional tools for development
+    apt-get install -y \
+      build-essential \
+      sqlite3 \
+      python3-psycopg2 \
+      libapache2-mod-wsgi-py3
+
+    # Enable Apache modules that you use in production
+    a2enmod rewrite
+    a2enmod userdir
+    a2enmod ssl
+    a2enmod wsgi
+    a2enmod headers
+
+    # Create user 'steve' with same UID as production (if different from vagrant)
+    if ! id "steve" &>/dev/null; then
+      useradd -m -s /bin/bash -G sudo steve
+      echo "steve:vagrant" | chpasswd
+      # Copy SSH keys for passwordless access
+      mkdir -p /home/steve/.ssh
+      cp /home/vagrant/.ssh/authorized_keys /home/steve/.ssh/ 2>/dev/null || true
+      chown -R steve:steve /home/steve/.ssh
+      chmod 700 /home/steve/.ssh
+      chmod 600 /home/steve/.ssh/authorized_keys 2>/dev/null || true
+    fi
+
+    # Create web directories structure to match production
+    mkdir -p /var/www/{jxqz.org,dx.jxqz.org,arpoison.net,suoc.org}
+    
+    # Setup additional storage volume (simulates production /dev/vdb1)
+    if [ -b /dev/sdb ]; then
+      echo "Setting up additional storage volume for enhanced web content layout..."
+      
+      # Check if already formatted
+      if ! blkid /dev/sdb1 &>/dev/null; then
+        echo "Formatting additional storage volume..."
+        # Create partition
+        echo -e "n\np\n1\n\n\nw" | fdisk /dev/sdb
+        # Format as ext4
+        mkfs.ext4 /dev/sdb1
+      fi
+      
+      # Create mount point for enhanced storage layout
+      mkdir -p /web-content
+      
+      # Add to fstab if not already present
+      if ! grep -q "/dev/sdb1" /etc/fstab; then
+        echo "/dev/sdb1 /web-content ext4 defaults,noatime,nofail 0 0" >> /etc/fstab
+      fi
+      
+      # Mount the volume
+      mount /web-content 2>/dev/null || echo "Volume already mounted or mount failed"
+      
+      # Create enhanced directory structure
+      mkdir -p /web-content/{sites,user,backups,uploads,logs}
+      mkdir -p /web-content/sites/{jxqz.org,dx.jxqz.org,arpoison.net,suoc.org}
+      mkdir -p /web-content/user/steve/public_html
+      
+      # Create compatibility symlinks to maintain existing paths
+      ln -sf /web-content/sites/jxqz.org /var/www/jxqz.org
+      ln -sf /web-content/sites/dx.jxqz.org /var/www/dx.jxqz.org
+      ln -sf /web-content/sites/arpoison.net /var/www/arpoison.net
+      ln -sf /web-content/sites/suoc.org /var/www/suoc.org
+      ln -sf /web-content/user/steve/public_html /home/steve/public_html
+      
+      echo "Enhanced storage layout configured with consolidated web content"
+    else
+      echo "No additional storage volume found, using standard layout"
+      # Standard layout for compatibility
+      mkdir -p /var/www/{jxqz.org,dx.jxqz.org,arpoison.net,suoc.org}
+      mkdir -p /home/steve/public_html
+    fi
+
+    # Set proper ownership for all web content
+    chown -R steve:www-data /web-content/ 2>/dev/null || chown -R steve:www-data /var/www/
+    chmod -R 755 /web-content/ 2>/dev/null || chmod -R 755 /var/www/
+    
+    # Ensure steve has proper ownership of user directory
+    chown -R steve:steve /web-content/user/steve/ 2>/dev/null || chown -R steve:steve /home/steve/
+    
+    # Enable user directories module
+    a2enmod userdir
+
+    # Create basic test page
+    echo "<h1>JXQZ Test VM</h1><p>$(date)</p>" > /var/www/html/index.html
+
+    # Start services
+    systemctl enable apache2
+    systemctl start apache2
+    systemctl enable postgresql
+    systemctl start postgresql
+    systemctl enable dovecot
+    systemctl start dovecot
+
+    echo ""
+    echo "=== JXQZ Test VM Setup Complete ==="
+    echo "VM IP: 192.168.56.10"
+    echo "Web access: http://localhost:8080"
+    echo "SSH: vagrant ssh"
+    echo "User 'steve' created with password 'vagrant'"
+    echo ""
+    echo "Next steps:"
+    echo "1. Test Terraform deployment to this VM"
+    echo "2. Deploy configurations from /vagrant/jxqz/config/"
+    echo "3. Test gallery scripts and applications"
+    echo ""
+  SHELL
+
+  # Advanced provisioning script for Terraform preparation
+  config.vm.provision "shell", path: "provision-terraform.sh", run: "never"
+end

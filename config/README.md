@@ -1,8 +1,31 @@
-# Apache2 Configuration Backup
+# Server Configuration Management
 
-This directory contains backup copies of Apache2 configuration files for disaster recovery.
+This directory contains tools and backups for server configuration management, disaster recovery, and Infrastructure as Code migration.
 
-## Files to Backup
+## Tools
+
+### `backup-apache-config.sh`
+Backs up Apache2 configuration from the local system (must be run on the server with sudo).
+
+### `retrieve-server-configs.sh`
+Retrieves comprehensive configuration files from a remote server via SSH. Includes Apache, system configs, SSL certificates, and custom scripts.
+
+**Usage:**
+```bash
+./retrieve-server-configs.sh -s your-server.com -u steve
+```
+
+### `analyze-configs.sh`
+Analyzes retrieved configurations to identify customizations and generate recommendations for Terraform module development.
+
+**Usage:**
+```bash
+./analyze-configs.sh [backup-directory]
+```
+
+## Configuration Categories
+
+## Configuration Categories
 
 ### Essential Apache2 Configuration
 - `apache2.conf` - Main Apache configuration
@@ -11,9 +34,60 @@ This directory contains backup copies of Apache2 configuration files for disaste
 - `mods-enabled/` - Enabled modules
 - `ports.conf` - Port configuration
 
+### System Configuration
+- Network settings (`/etc/network/`, `/etc/systemd/network/`)
+- Host configuration (`/etc/hostname`, `/etc/hosts`)
+- DNS configuration (`/etc/resolv.conf`)
+
+### Service Configuration
+- **Dovecot** - IMAP email server configuration
+- **Postfix** - SMTP server configuration  
+- **fail2ban** - Intrusion prevention
+- **UFW** - Uncomplicated Firewall
+
 ### Security & SSL
 - SSL certificate files (backup separately, not in git)
+- Public certificates for documentation
 - `.htaccess` files from web directories
+
+### Custom Scripts and Automation
+- User scripts (`~/bin/`, `~/scripts/`)
+- System scripts (`/usr/local/bin/`, `/opt/`)
+- Cron jobs and scheduled tasks
+
+## Workflow
+
+### 1. Retrieve Current Configuration
+```bash
+# From your local development machine
+cd /path/to/jxqz/config
+./retrieve-server-configs.sh -s your-server.com
+
+# This creates: server-configs-YYYYMMDD-HHMMSS/
+```
+
+### 2. Analyze Retrieved Configuration
+```bash
+# Analyze what was retrieved
+./analyze-configs.sh
+
+# Review the generated analysis report
+# Creates: server-configs-*/CONFIGURATION_ANALYSIS.md
+```
+
+### 3. Document and Version Control
+```bash
+# Add to git (sensitive data already sanitized)
+git add config/
+git commit -m "Add server configuration backup YYYY-MM-DD"
+git push
+```
+
+### 4. Use for Terraform Development
+Use the retrieved configurations and analysis to inform:
+- Terraform module development
+- Infrastructure as Code migration
+- Disaster recovery procedures
 
 ## Recovery Process
 

@@ -1,0 +1,288 @@
+Selective Configuration Backup
+Generated: Mon Oct 20 03:22:17 PM PDT 2025
+Server: steve@jxqz.org
+Backup Location: /home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136
+
+=== What Was Retrieved ===
+Configuration files only - images and large files excluded
+
+=== Directory Structure ===
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/apache2
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/bin
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/branches
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/hooks
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/info
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/logs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/logs/refs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/logs/refs/heads
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/logs/refs/remotes
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/logs/refs/remotes/origin
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/01
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/02
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/29
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/2a
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/30
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/31
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/35
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/38
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/3c
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/3f
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/43
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/48
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/4e
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/52
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/55
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/58
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/5b
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/5d
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/61
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/6d
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/70
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/77
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/7f
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/84
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/8b
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/8e
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/95
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/9a
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/9d
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/9f
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/a4
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/a7
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/ad
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/c1
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/c6
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/c9
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/ce
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/d9
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/e3
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/ed
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/ee
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/fd
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/fe
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/info
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/objects/pack
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/refs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/refs/heads
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/refs/remotes
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/refs/remotes/origin
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/.git/refs/tags
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework1
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework1/analysis
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework1/analysis/analysis_outputs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework1/chat-transcripts
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework1/data
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework1/docs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework1/images
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/analysis
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/api
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/chat-transcripts
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/config
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/docs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/exports
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/flask-test
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/misc
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-database
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-database/debian
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-database/usr
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-database/usr/bin
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-database/usr/share
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-database/usr/share/dxcluster-database
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper/debian
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper/etc
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper/etc/dxcluster
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper/etc/systemd
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper/etc/systemd/system
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper/usr
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper/usr/bin
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper/usr/share
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/packages/dxcluster-scraper/usr/share/dxcluster-scraper
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/web
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/8051
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/8051/as31
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/8051/at89s52
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/8051/c8051f
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/8051/stc15f104w
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/8051/stc89c52rc
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/at24cxx_eeprom
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/blink
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/bmp180_hd4480
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/cw_blinker
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/hd4480_ds1307
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/i2c_scanner
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/images
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/internal_eeprom
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/ir_receiver
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/keypad
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/led_pwm_fade
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/millis_plotter
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/OneWireScan
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/OneWireTemperature
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/pn532_rfid
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/serial_command
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/arduino/tea5767
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/avr
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/avr/arduino-nano
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/avr/arduino-sketches
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/avr/arduino-sketches/cw_blinker
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/avr/arduino-sketches/ghostbox
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/avr/attiny
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/avr/programmers
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/avr/programmers/usbasp
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/avr/programmers/usbtinyisp
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/c8051f
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/esp8266
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/forth
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/ft232h
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/ft232h/blinka
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/ft232h/libftdi
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/ft232h/pyftdi
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/branches
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/hooks
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/info
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/logs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/logs/refs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/logs/refs/heads
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/logs/refs/remotes
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/logs/refs/remotes/origin
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/objects
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/objects/info
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/objects/pack
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/refs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/refs/heads
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/refs/remotes
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/refs/remotes/origin
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/.git/refs/tags
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/linux-gpio
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/linux-i2c
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/memory
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/memory/ch341a
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/morse
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/msp430
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/peripherals
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/peripherals/bmp180
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/peripherals/ht16k33
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/peripherals/keypad
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/peripherals/nrf24l01
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/pic
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/pic/pic12f675
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/pic/programmer
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/pic/programmer/k150
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/stc89
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/stm32
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/microcontrollers/stm8
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/user-configs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/car
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/datasheets
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/dx-data
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/Exams
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/Excercises
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/Homework
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/Labs
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/hex
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/juke
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/manuals
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/pentax-k2
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/print
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/resume
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion
+
+=== File Count by Type ===
+Configuration files: 2
+HTML files: 11
+Text files: 11
+Scripts: 25
+Total files: 59
+
+=== Excluded for Space ===
+- Image files (*.jpg, *.jpeg, *.png, *.gif)
+- PDF files (*.pdf)
+- Archive files (*.zip, *.tar*)
+- Large binary files
+
+=== Retrieved Files ===
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/APACHE_ANALYSIS.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/config/dx.jxqz.org.conf
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/docker-compose.production.simple.yml
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/docker-compose.production.yml
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/docker-compose.yml
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/flask-test/apache-wsgi.conf
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/scripts/github-configs/cs330-projects/homework2/openapi.yaml
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/SELECTIVE_BACKUP_MANIFEST.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/user-configs/.bashrc
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/user-configs/.gitconfig
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/user-configs/.pinerc
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/user-configs/.profile
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/6m-rptr.html
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/commodore128.html
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/dx-data/dx_spots.1.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/dx-data/dx_spots.2.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/dx-data/dx_spots.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/discovery_tutorials.htm
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/dmm_tutorials.htm
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/Exams/FinalExam_links.htm
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/Labs/Lab0.htm
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/syllabus261.htm
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/ee261/syllabus262.htm
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/fluke-8021a.html
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/hello.ihx
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/hex/blinky.hex
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/index.html
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/juke/cvt.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/juke/parts-needed.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/juke/tires.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/juke/wipers.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/nissan.txt
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/scrap.html
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060001.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060002.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060003.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060004.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060005.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060006.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060007.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060008.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060009.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060010.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060011.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060012.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060013.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060014.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060015.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060016.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060017.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060018.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060019.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060020.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060021.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060022.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060023.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060024.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/38060025.JPG
+/home/steve/GITHUB/jxqz/config/selective-configs-20251020-152136/web-configs/public_html/zion/note.txt
+
+=== Next Steps ===
+1. Review Apache configuration in apache2/ directory
+2. Check web configs in web-configs/public_html/
+3. Examine user configurations in user-configs/
+4. Use configs to inform Terraform module development
+5. Test configuration restoration procedures
+
+=== Apache Configuration Notes ===
+Virtual host configurations should be in apache2/sites-available/
+Check APACHE_ANALYSIS.txt for detailed Apache setup information

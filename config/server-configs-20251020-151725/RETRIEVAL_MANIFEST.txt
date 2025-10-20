@@ -1,0 +1,48 @@
+Server Configuration Retrieval Report
+Generated: Mon Oct 20 03:18:10 PM PDT 2025
+Remote Server: steve@jxqz.org
+Local Backup: /home/steve/GITHUB/jxqz/config/server-configs-20251020-151725
+
+=== Directory Structure ===
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/apache2
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/cron
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/network
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/scripts
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/services
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/ssl
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/ssl/etc
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/ssl/etc/ssl
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/ssl/etc/ssl/certs
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/system
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/user
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/user/bin
+
+=== Retrieved Files ===
+4 files retrieved
+
+=== File Listing ===
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/RETRIEVAL_MANIFEST.txt
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/ssl/etc/ssl/certs/ssl-cert-snakeoil.pem
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/SYSTEM_INFO.txt
+/home/steve/GITHUB/jxqz/config/server-configs-20251020-151725/user/.bashrc
+
+=== Security Notes ===
+- Private keys (.key files) were excluded
+- Files containing 'private' or 'password' in name were excluded
+- Configuration files were sanitized to remove password values
+- Original unsanitized files saved with .original extension where applicable
+
+=== Next Steps ===
+1. Review retrieved configurations
+2. Document differences from default configurations
+3. Create Terraform modules based on custom configurations
+4. Test configuration restoration procedures
+5. Update disaster recovery documentation
+
+=== Integration with Terraform ===
+Use these configurations to inform:
+- terraform/modules/apache/
+- terraform/modules/security/
+- terraform/modules/mail/
+- User data scripts for automated deployment
