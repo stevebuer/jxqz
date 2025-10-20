@@ -1,0 +1,41 @@
+# Chat transcripts - keep local for privacy/reference
+chat-transcripts/
+
+# Terraform sensitive files
+*.tfvars
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Apache configuration backups (may contain sensitive info)
+config/apache2-backup-*/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+
+# Local development
+local/
+private/
+secrets/

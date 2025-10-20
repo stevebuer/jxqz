@@ -1,0 +1,8 @@
+# Vultr API key - get this from Vultr account settings
+vultr_api_key = "your-vultr-api-key-here"
+
+# Server configuration
+server_label = "jxqz-production"
+ssh_key_name = "steve-laptop-key"
+
+# You can override other variables here as needed

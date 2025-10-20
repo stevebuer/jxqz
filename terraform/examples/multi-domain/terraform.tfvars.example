@@ -1,0 +1,35 @@
+# Multi-Domain Configuration
+
+# Vultr API key
+vultr_api_key = "your-vultr-api-key-here"
+
+# Server configuration
+server_label = "steve-production-server"
+
+# Domain configuration - customize as needed
+domains = [
+  {
+    name          = "jxqz.org"
+    document_root = "/var/www/jxqz.org"
+    is_primary    = true
+    is_analytics  = false
+  },
+  {
+    name          = "dx.jxqz.org"
+    document_root = "/var/www/dx.jxqz.org"
+    is_primary    = false
+    is_analytics  = true
+  },
+  {
+    name          = "arpoison.net"
+    document_root = "/var/www/arpoison.net"
+    is_primary    = false
+    is_analytics  = false
+  },
+  {
+    name          = "suoc.org"
+    document_root = "/var/www/suoc.org"
+    is_primary    = false
+    is_analytics  = false
+  }
+]

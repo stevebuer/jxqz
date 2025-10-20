@@ -1,0 +1,5 @@
+# Vultr API key
+vultr_api_key = "your-vultr-api-key-here"
+
+# Domains to manage (adjust as needed)
+domains = ["jxqz.org", "arpoison.net", "suoc.org"]

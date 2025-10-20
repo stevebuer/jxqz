@@ -1,0 +1,89 @@
+# Cloudflare API Token (get from Cloudflare dashboard)
+cloudflare_api_token = "your-cloudflare-api-token-here"
+
+# Vultr API Key
+vultr_api_key = "your-vultr-api-key-here"
+
+# Domain configuration
+# You'll need to get zone IDs from Cloudflare dashboard after adding domains
+domains = {
+  "jxqz" = {
+    zone_id = "your-jxqz-zone-id-from-cloudflare"
+    records = [
+      {
+        name    = "@"              # Root domain (jxqz.org)
+        type    = "A"
+        content = "server_ip_auto" # Will be set automatically to server IP
+        ttl     = 300
+        proxied = true             # Enable Cloudflare proxy for main site
+      },
+      {
+        name    = "dx"             # Analytics subdomain (dx.jxqz.org)
+        type    = "A"
+        content = "server_ip_auto" # Will be set automatically to server IP
+        ttl     = 300
+        proxied = false            # No proxy for API/application
+      }
+    ]
+  },
+  
+  "arpoison" = {
+    zone_id = "your-arpoison-zone-id-from-cloudflare"
+    records = [
+      {
+        name    = "@"              # Root domain (arpoison.net)
+        type    = "A"
+        content = "server_ip_auto" # Will be set automatically to server IP
+        ttl     = 300
+        proxied = true             # Enable Cloudflare proxy
+      }
+    ]
+  },
+  
+  "suoc" = {
+    zone_id = "your-suoc-zone-id-from-cloudflare"
+    records = [
+      {
+        name    = "@"              # Root domain (suoc.org)
+        type    = "A"
+        content = "server_ip_auto" # Will be set automatically to server IP
+        ttl     = 300
+        proxied = true             # Enable Cloudflare proxy
+      }
+    ]
+  }
+}
+
+# Optional: Add additional records like MX, TXT, etc.
+# domains = {
+#   "jxqz" = {
+#     zone_id = "your-zone-id"
+#     records = [
+#       {
+#         name    = "@"
+#         type    = "A"
+#         content = "server_ip_auto"
+#         proxied = true
+#       },
+#       {
+#         name    = "dx"
+#         type    = "A"
+#         content = "server_ip_auto"
+#         proxied = false
+#       },
+#       # Email records (MX records should NOT be proxied)
+#       {
+#         name    = "@"
+#         type    = "MX"
+#         content = "10 jxqz.org"  # Points to same server for email
+#         proxied = false
+#       },
+#       {
+#         name    = "mail"
+#         type    = "A"
+#         content = "server_ip_auto"  # IMAP/SMTP access
+#         proxied = false              # Email must be direct
+#       }
+#     ]
+#   }
+# }
