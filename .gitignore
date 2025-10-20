@@ -1,6 +1,53 @@
 # Chat transcripts - keep local for privacy/reference
 chat-transcripts/
 
+# Image files (large binaries not needed in git)
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
+*.gif
+*.GIF
+*.bmp
+*.BMP
+*.tiff
+*.TIFF
+
+# PDF files (documentation can be large)  
+*.pdf
+*.PDF
+
+# Archive files
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.rar
+*.7z
+
+# VirtualBox files
+*.vdi
+*.vbox
+*.vbox-prev
+
+# Personal data - excluded for privacy/physical backup
+public_html/
+*/public_html/
+**/public_html/**
+
+# Configuration backups with timestamps (keep structure, not content)
+config/*-20*/
+config/server-configs-*/
+config/accessible-configs-*/  
+config/selective-configs-*/
+config/dovecot-config-*/
+config/storage-config-*/
+config/database-growth-analysis-*/
+config/docker-space-solution-*/
+config/enhanced-storage-plan-*/
+
 # Terraform sensitive files
 *.tfvars
 *.tfstate
