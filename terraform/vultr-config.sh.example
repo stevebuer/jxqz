@@ -1,0 +1,26 @@
+# Vultr API Configuration Template
+# Copy this to vultr-config.sh and add your actual API key
+# 
+# Usage:
+#   cp vultr-config.sh.example vultr-config.sh
+#   nano vultr-config.sh  # Edit with your real API key
+#   source vultr-config.sh
+
+# Required: Your Vultr API key (get from https://my.vultr.com/settings/#settingsapi)
+export VULTR_API_KEY="your-vultr-api-key-here"
+
+# Optional: Default region for new resources
+export VULTR_REGION="ewr"  # Examples: ewr, lax, fra, ams, syd
+
+# Optional: Default plan for new instances
+export VULTR_PLAN="vc2-1c-1gb"  # Examples: vc2-1c-1gb, vc2-2c-4gb, vc2-4c-8gb
+
+# Terraform variables (automatically set from above)
+export TF_VAR_default_region="$VULTR_REGION"
+export TF_VAR_default_plan="$VULTR_PLAN"
+
+# Confirmation message
+echo "✅ Vultr API configuration loaded"
+echo "   API Key: ${VULTR_API_KEY:0:12}..." 
+echo "   Default Region: $VULTR_REGION"
+echo "   Default Plan: $VULTR_PLAN"

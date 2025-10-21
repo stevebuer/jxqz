@@ -55,6 +55,14 @@ config/enhanced-storage-plan-*/
 .terraform/
 .terraform.lock.hcl
 
+# API keys and local configuration
+*-config.sh
+*-credentials.sh
+api-keys.sh
+secrets.env
+.env
+.env.local
+
 # Apache configuration backups (may contain sensitive info)
 config/apache2-backup-*/
 

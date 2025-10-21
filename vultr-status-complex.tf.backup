@@ -1,0 +1,141 @@
+# Vultr API Status and Information Retrieval
+# This configuration tests API connectivity and displays current cloud resources
+
+terraform {
+  required_providers {
+    vultr = {
+      source  = "vultr/vultr"
+      version = "~> 2.0"
+    }
+  }
+}
+
+# Configure the Vultr Provider
+# Set VULTR_API_KEY environment variable or use vultr_api_key variable
+provider "vultr" {
+  # API key will be read from VULTR_API_KEY environment variable
+  # or you can uncomment and set the variable below
+  # api_key = var.vultr_api_key
+  rate_limit = 700
+  retry_limit = 3
+}
+
+# Variables
+variable "vultr_api_key" {
+  description = "Vultr API Key (optional if using environment variable)"
+  type        = string
+  default     = ""
+  sensitive   = true
+}
+
+# Data sources to retrieve current Vultr resources
+# Note: vultr_instances data source may not be available in current provider version
+
+data "vultr_account" "current" {
+  # This will get account information
+}
+
+# Note: Individual region and plan data sources are not supported in current Vultr provider
+# Use the vultr_instances data source to see your actual resources
+
+# Outputs to display current status and configuration
+output "api_connectivity_status" {
+  description = "Confirms API connectivity"
+  value = {
+    status = "✅ Connected to Vultr API"
+    timestamp = timestamp()
+  }
+}
+
+output "account_information" {
+  description = "Current Vultr account details"
+  value = {
+    name = data.vultr_account.current.name
+    email = data.vultr_account.current.email
+    balance = data.vultr_account.current.balance
+    pending_charges = data.vultr_account.current.pending_charges
+    acl = data.vultr_account.current.acl
+  }
+}
+
+output "existing_instances" {
+  description = "Current instances in your account"
+  value = {
+    total_count = length(data.vultr_instances.existing.instances)
+    instances = [
+      for instance in data.vultr_instances.existing.instances : {
+        id = instance.id
+        label = instance.label
+        hostname = instance.hostname
+        main_ip = instance.main_ip
+        vcpu_count = instance.vcpu_count
+        ram = instance.ram
+        disk = instance.disk
+        region = instance.region
+        plan = instance.plan
+        os = instance.os
+        status = instance.status
+        power_status = instance.power_status
+        server_status = instance.server_status
+        allowed_bandwidth = instance.allowed_bandwidth
+        netmask_v4 = instance.netmask_v4
+        gateway_v4 = instance.gateway_v4
+        date_created = instance.date_created
+        # Include additional storage info if available
+        features = try(instance.features, [])
+      }
+    ]
+  }
+}
+
+output "jxqz_production_server" {
+  description = "Details for jxqz.org production server (if found)"
+  value = {
+    for instance in data.vultr_instances.existing.instances :
+    instance.label => {
+      ip_address = instance.main_ip
+      hostname = instance.hostname
+      vcpu = instance.vcpu_count
+      ram_mb = instance.ram
+      disk_gb = instance.disk
+      region = instance.region
+      plan = instance.plan
+      os = instance.os
+      status = instance.status
+      power_status = instance.power_status
+      bandwidth_gb = instance.allowed_bandwidth
+      created = instance.date_created
+      features = try(instance.features, [])
+    }
+    if can(regex("jxqz|production", lower(instance.label))) || 
+       can(regex("jxqz|production", lower(instance.hostname)))
+  }
+}
+
+# Note: Region and plan data sources removed for compatibility
+# To get this information, use the Vultr API directly or web console
+
+# Plan information removed for compatibility with current Vultr provider
+
+output "configuration_summary" {
+  description = "Summary of current Vultr configuration"
+  value = {
+    api_status = "Connected"
+    account_name = data.vultr_account.current.name
+    instance_count = length(data.vultr_instances.existing.instances)
+    account_balance = data.vultr_account.current.balance
+    pending_charges = data.vultr_account.current.pending_charges
+    
+    # Calculate total resources
+    total_vcpu = sum([for i in data.vultr_instances.existing.instances : i.vcpu_count])
+    total_ram_gb = sum([for i in data.vultr_instances.existing.instances : i.ram / 1024])
+    total_disk_gb = sum([for i in data.vultr_instances.existing.instances : i.disk])
+    total_bandwidth_gb = sum([for i in data.vultr_instances.existing.instances : i.allowed_bandwidth])
+    
+    # Monthly cost estimate (if available)
+    estimated_monthly_cost = sum([
+      for i in data.vultr_instances.existing.instances : 
+      try(i.monthly_cost, 0)
+    ])
+  }
+}
